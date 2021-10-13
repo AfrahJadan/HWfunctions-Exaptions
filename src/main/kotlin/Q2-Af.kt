@@ -1,25 +1,17 @@
 import java.util.*
-
-
-
-
 fun main(args: Array<String>) {
-    calculateSalary()
+    calsalary()
 }
-
-private fun calculateSalary() {
+private fun calsalary() {
     val scanner = Scanner(System.`in`)
 
-    println("Insert current annual salary: ")
+    println("Insert salary: ")
     val salary = scanner.nextDouble()
 
-    println("choose the rating: \n(1=excellent, 2=good, and 3=poor)") //تقييم الموظف ,
+    println("choose the rating: \n(1=excellent, 2=good, and 3=poor)")
     val rating = scanner.nextInt()
-
-
     val result: Double
     val raise: Double
-
     if (rating == 1) {
         raise = 0.06
         result = (salary * raise) + salary
@@ -30,7 +22,7 @@ private fun calculateSalary() {
         raise = 0.015
         result = (salary * raise) + salary
     } else {
-        println("Error! select correct rating from 1 to 3")
+        println("Error!")
         return
     }
 
